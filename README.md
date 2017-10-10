@@ -8,3 +8,5 @@ Tu código debe estar compuesto por 1 función: **isValidCard**
 El usuario no debe poder ingresar un campo vacío
 
 ### PSEUDOCODIGO
+
+![recursos](assets/pseudocodigoCard.PNG)
