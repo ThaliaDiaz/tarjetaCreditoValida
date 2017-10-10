@@ -3,7 +3,7 @@ var numCard=prompt("Ingrese su numero de tarjeta");
 //Valido que el usuario solo ingrese numeros, que no acepte espacios en blanco, si ingresa algo distingto a numeros
 //vuelve a pedirme el ingreso
 if(numCard.length==0 || typeof(numCard)==='NaN'|| numCard==' '){
-    numCard;
+    prompt("Ingrese su numero de tarjeta");
 }else{
   console.log('Número ingresado es: '+numCard);
 }
