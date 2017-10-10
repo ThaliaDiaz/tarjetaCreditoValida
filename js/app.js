@@ -16,6 +16,7 @@ var isValidCard= function(numCard){
      var arr=str.split('');
     //invierte el array
      arr.reverse();
+     parseInt(arr.reverse());
     //Inicializo las variables que luego utilizaré
      var prod=1;
      var sum=0;
@@ -24,7 +25,7 @@ var isValidCard= function(numCard){
        //Determino si una posición es par
          if(i%2===0){
            //Asigno a prod el valor del número en la posición i multiplicada por dos
-             prod=arr[i]*2;
+             prod=parseInt(arr[i]*2);
            //Si el prod es menor que 10 entra y se asigna ese valor en reemplazo de el elemento que esta en la posicion i del arreglo
              if(prod<10){
                  arr[i]=prod;
@@ -35,6 +36,9 @@ var isValidCard= function(numCard){
                  // Asigno el valor de mi resul al elemento en la posicion i del array
                  arr[i]=resul;
              }
+         }
+         else{
+           parseInt(arr[i]);
          }
      }
      //muestro mi nuevo arreglo
