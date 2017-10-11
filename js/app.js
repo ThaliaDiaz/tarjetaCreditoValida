@@ -45,7 +45,7 @@ var isValidCard= function(numCard){
     //sumo cada elemento del arreglo actual y lo almaceno en sum
      for(i=0; i<arr.length; i++){
        sum=sum+arr[i];
-     }
+     }n
      //muestro mi suma total
      console.log(sum);
      //Pregunta si la suma del arreglo actual es divisible entre 10
