@@ -1,12 +1,16 @@
-//Pido ingreso de un numero de tarjeta al usuario
-var numCard=prompt("Ingrese su numero de tarjeta");
-//Valido que el usuario solo ingrese numeros, que no acepte espacios en blanco, si ingresa algo distingto a numeros
-//vuelve a pedirme el ingreso
-if(numCard.length==0 || typeof(numCard)==='NaN'|| numCard==' '){
-    prompt("Ingrese su numero de tarjeta");
+//solicito ingreso de numero de tarjeta
+do{
+  var numCard=prompt("Ingrese su numero de tarjeta");
+  var arr=numCard.split('');
+if( typeof(numCard.length==0 || numCard)==='NaN'|| arr[0]==' '|| numCard==""){
+    var op=false;
 }else{
-  console.log('Número ingresado es: '+numCard);
-}
+    var arr=numCard.split('');
+    if(typeof(parseInt(arr[0]))=='number'){
+        console.log("encontrado");
+        document.write('el numero de su tarjeta ingresada es: '+ numCard);
+
+// aqui mi codigo
 //Creo mi funcion para validar la tarjeta de acuerdo al número ingresado
 var isValidCard= function(numCard){
     //declaración de mis  variables
@@ -45,7 +49,7 @@ var isValidCard= function(numCard){
     //sumo cada elemento del arreglo actual y lo almaceno en sum
      for(i=0; i<arr.length; i++){
        sum=sum+arr[i];
-     }n
+     }
      //muestro mi suma total
      console.log(sum);
      //Pregunta si la suma del arreglo actual es divisible entre 10
@@ -60,5 +64,11 @@ var isValidCard= function(numCard){
   return msg;
 }
 
- //document.write(isValidCard(numCard));
+ document.write('<br> '+ isValidCard(numCard));
  console.log(isValidCard(numCard));
+
+
+         op=true;
+        }
+    }
+}while(op==false)
